@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:cov": "jest --watchAll --coverage"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --no-cache --watchAll",
+    "test:cov": "yarn test --coverage"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
