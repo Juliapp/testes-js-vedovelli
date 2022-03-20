@@ -1,7 +1,4 @@
-module.exports.queryString = (obj) => {
-  const entries = Obsject.entries(obj).map((item) => {
-    return `${item[0]}=${item[1]}`;
-  });
-
-  return entries.join('&');
-};
+module.exports.queryString = (obj) =>
+  Object.entries(obj)
+    .map(([key, val]) => `${key}=${val}`)
+    .join('&');
