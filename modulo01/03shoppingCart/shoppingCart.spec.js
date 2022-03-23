@@ -114,6 +114,19 @@ describe('Cart', () => {
 
     it('should return an object with the total and the list of items', () => {
       cart.add({
+        product,
+        quantity: 2,
+      });
+
+      cart.add({
+        product: product2,
+        quantity: 3,
+      });
+      expect(cart.summary().formatted).toBe('R$1,963.92');
+    });
+
+    it('should return an object with the total and the list of items', () => {
+      cart.add({
         product: product2,
         quantity: 3,
       });
